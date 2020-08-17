@@ -29,9 +29,9 @@ export class DurationEstimator {
   public update (progress: number): this {
     if (this.time === undefined) {
       this.progress = progress
-      this.time = performance.now()
+      this.time = Date.now()
     } else {
-      const delta = performance.now() - this.time
+      const delta = Date.now() - this.time
 
       if (delta) {
         this.time += delta
