@@ -1,6 +1,6 @@
 {
   "name": "duration-estimator",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Agnostic duration estimator for asynchronous tasks",
   "author": "Julien Dargelos <contact@juliendargelos.com>",
   "license": "MIT",
