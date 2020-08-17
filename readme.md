@@ -52,6 +52,6 @@ estimator.reset() // ready to make estimations for a new task
 By default, the estimator computes remaining time based on the last 10 samples it got. You can change that by setting the moving average length:
 
 ```typescript
-const estimator = new DurationEstimator(20) // Takes the last 20 samples in account
-const estimator = new DurationEstimator(Infinity) // Takes all samples in account
+new DurationEstimator(20) // Takes the last 20 samples in account
+new DurationEstimator(Infinity) // Takes all samples in account
 ```
