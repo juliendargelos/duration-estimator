@@ -25,7 +25,7 @@ Using esm bundle from cdn:
 
 ```html
 <script type="module">
-    import { DurationEstimator } from 'https://cdn.skypack.dev/duration-estimator'
+  import { DurationEstimator } from 'https://cdn.skypack.dev/duration-estimator'
 </script>
 ```
 
@@ -34,7 +34,7 @@ Using esm bundle from cdn:
 ```typescript
 import { DurationEstimator } from 'duration-estimator'
 
-function task (onProgess): void {
+function task (onProgess) {
   // Asynchronous task yielding progress
 }
 
