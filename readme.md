@@ -35,7 +35,7 @@ Using esm bundle from cdn:
 import { DurationEstimator } from 'duration-estimator'
 
 function task (onProgess) {
-  // Asynchronous task yielding progress
+  // Asynchronous task yielding progress in range 0-1
 }
 
 const estimator = new DurationEstimator()
