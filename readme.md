@@ -34,13 +34,34 @@ Using esm bundle from cdn:
 ```typescript
 import { DurationEstimator } from 'duration-estimator'
 
-function task (onProgess) {
-  // Asynchronous task yielding progress in range 0-1
+// Asynchronous task yielding progress in range 0-1
+function task(onProgress) {
+  let n = 0
+  const steps = 10
+
+  onProgress(0)
+
+  const interval = setInterval(() => {
+    onProgress(++n / steps)
+    n === steps && clearInterval(interval)
+  }, 500)
 }
 
 const estimator = new DurationEstimator()
 
 task(progress => console.log(`${estimator.estimate(progress)}ms remaining`))
+
+// Infinityms remaining
+// 4536ms remaining
+// 4027.9960278053622ms remaining
+// 3520.9907223204477ms remaining
+// 3014.985074579578ms remaining
+// 2512.9896480589387ms remaining
+// 2010.6595867972594ms remaining
+// 1507.709410925819ms remaining
+// 1005.2470758800504ms remaining
+// 502.44262539511163ms remaining
+// 0ms remaining
 ```
 
 The estimator can be reused after calling `reset()`:
